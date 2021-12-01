@@ -1,4 +1,3 @@
-package javaUdemyCourse;
 
 import java.util.Scanner;
 
