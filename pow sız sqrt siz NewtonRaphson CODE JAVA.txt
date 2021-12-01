@@ -1,0 +1,28 @@
+package javaUdemyCourse;
+
+import java.util.Scanner;
+
+public class dizi {
+static float fakt(float x,float b) {
+	return (float) (x*x*x*x*x*x-b);
+}
+static float faktt(float x) {
+	return (float) (6*x*x*x*x*x);
+}
+	public static void main(String[] args) {
+		float b,e,xsifir,xbir;
+		Scanner input=new Scanner(System.in);
+		System.out.println("karekök almak istediğiniz sayiyi girin");
+		b=input.nextFloat();
+		System.out.println("eps değerini girin");
+		e=input.nextFloat();
+		System.out.println("x0 girin");
+		xsifir=input.nextFloat();
+		while(Math.abs(fakt(xsifir,b))>e) {
+			xbir=(xsifir)-((fakt(xsifir,b))/(faktt(xsifir)));
+			xsifir=xbir;
+		}
+		System.out.println(xsifir);
+	}
+
+	}

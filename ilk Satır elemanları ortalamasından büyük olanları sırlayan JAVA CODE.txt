@@ -1,0 +1,21 @@
+public class MyClass {
+    public static void main(String args[]) {
+     int [][] t= new int[][]{{7,10,16},{8,5,11},{16,9,21}};
+   int toplam=0;
+   int ortalama=0;
+   System.out.println("ortalamadan küçük olan sayılar:");
+   for(int i=0;i<3;i++) {
+     for(int j=0;j<=2;j++) {
+                toplam=toplam + t[0][j];
+            }
+        }
+    ortalama=toplam/9;
+    for(int i=0;i<=2;i++) {
+     for(int j=0;j<=2;j++) {
+          if(t[i][j]<ortalama) {
+              System.out.println(t[i][j]);
+                }
+            }
+        }
+    }
+}

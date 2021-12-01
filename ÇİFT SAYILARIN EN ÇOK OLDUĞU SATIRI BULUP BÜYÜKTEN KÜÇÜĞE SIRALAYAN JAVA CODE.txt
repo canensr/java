@@ -1,0 +1,130 @@
+package dizi;
+
+public class dizi {
+
+	public static void main(String[] args) {
+		int [][]dizi={{12,8,10},{8,189,60},{7,20,19}};
+		int s1=0,s2=0,s3=0;
+		int []a=new int [3];
+		int []b=new int [3];
+		int []c=new int [3];
+		int x;
+		for(int i=0;i<3;i++)
+		{
+		   for(int j=1;j<3;j++)
+		   {
+		       if(dizi[i][j-1]<dizi[i][j])
+		       {
+		           x=dizi[i][j];
+		           dizi[i][j]=dizi[i][j-1];
+		           dizi[i][j-1]=x;
+		           
+		       }
+		       
+		   }
+		   
+		}
+		System.out.println("***********************************");
+		System.out.println("Bütün Satırlardaki Çiftlerin Büyükten Küçüğe Sıralanışı");
+		System.out.println();
+		
+		for(int i=0;i<3;i++)
+		{
+		   for(int j=0;j<3;j++)
+		   {   
+		       System.out.print(dizi[i][j]+"   ");
+		       
+		   }
+		   System.out.println();
+		   
+		}
+		for(int j=0;j<3;j++)
+		{
+		   
+		   if(dizi[0][j]%2==0)
+		   {
+		       a[s1]=dizi[0][j];
+		       s1++;
+		   }
+		}
+		for(int j=0;j<3;j++)
+		{
+		   
+		   if(dizi[1][j]%2==0)
+		   {
+		       b[s2]=dizi[1][j];
+		       s2++;
+		   }
+		}
+		for(int j=0;j<3;j++)
+		{
+		   
+		   if(dizi[2][j]%2==0)
+		   {
+		       c[s3]=dizi[2][j];
+		       s3++;
+		   }
+		}
+		System.out.println("***********************************");
+		System.out.println("EN Çok Çift olan Satırın Sıralanışı");
+		System.out.println();
+		
+		if(s1>s2 && s1>s3)
+		{
+		   for(int j=0;j<s1;j++)
+		   {
+		       System.out.print(a[j]+" ");
+		       
+		   }
+		   
+		}
+		if(s2>s1 && s2>s3)
+		{
+		   for(int j=0;j<s2;j++)
+		   {
+		       System.out.print(b[j]+" ");
+		       
+		   }
+		   
+		}
+		    if(s3>s1 && s3>s2)
+		{
+		   for(int j=0;j<s3;j++)
+		   {
+		       System.out.print(c[j]+" ");
+		       
+		   }
+		   
+		}
+		if(s3==s1 && s3>s2)
+		{
+		   for(int j=0;j<s3;j++)
+		   {
+		       System.out.print(c[j]+" ");
+		       System.out.print(a[j]+" ");
+		   }
+		   
+		}
+		if(s2==s1 && s2>s3)
+		{
+		   for(int j=0;j<s1;j++)
+		   {
+		       System.out.print(b[j]+" ");
+		       System.out.print(a[j]+" ");
+		   }
+		   
+		}
+		if(s2==s3 && s2>s1)
+		{
+		   for(int j=0;j<s3;j++)
+		   {
+		       System.out.print(b[j]+" ");
+		       System.out.print(c[j]+" ");
+		   }
+		   
+		}
+		System.out.println();
+		System.out.println("***********************************");
+	}
+
+}

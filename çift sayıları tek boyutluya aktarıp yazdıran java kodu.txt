@@ -1,0 +1,43 @@
+
+
+
+
+      5 7 42 11             verilen matris içinden çift sayıları tek boyutlu
+      4 5 8  16             diziye aktaran ve diziyi sıralayan(artan sıra asc)
+                            bir java programı yazınız.
+ 
+
+public class dizi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,j,t;
+      int [][] x= new int[][] {{5,7,42,11},{4,6,8,16}};
+      int k=0;
+      int a[]=new int[5];
+      for(i=0;i<=1;i++) {
+    	  for(j=0;j<=3;j++) {
+    		  if(x[i][j]%2==0) {
+    			  a[k]=x[i][j];
+    			  k++;
+    		  }
+    	  }
+      }
+      
+      for(i=0;i<=k-2;i++) {
+    	  for(j=i+1;j<=k-1;j++) {
+    		  if(a[i]>a[j]) {
+    			  t=a[i];
+    			  a[i]=a[j];
+    			  a[j]=t;
+    			  
+    		  }
+    	  }
+      }
+      
+      for(i=0;i<=k-1;i++)
+    	  System.out.println(a[i]);
+      
+	}
+
+}
