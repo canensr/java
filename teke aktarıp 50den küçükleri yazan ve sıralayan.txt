@@ -1,0 +1,36 @@
+//matristeki elemanları tek boyutlu diziye aktarıp 50 ve daha küçük olan eleamanları 
+//sıralayıp yazdıran
+public class dersSinav {
+
+	public static void main(String[] args) {
+		int i,j,t;
+	      int [][] x= new int[][] {{15,22,81,93},{22,5,49,100}};
+	      int k=0;
+	      int a[]=new int[5];
+	      for(i=0;i<=1;i++) {
+	    	  for(j=0;j<=3;j++) {
+	    		  if(x[i][j]<=50) {
+	    			  a[k]=x[i][j];
+	    			  k++;
+	    		  }
+	    	  }
+	      }
+	      
+	      for(i=0;i<=k-2;i++) {
+	    	  for(j=i+1;j<=k-1;j++) {
+	    		  if(a[i]>a[j]) {
+	    			  t=a[i];
+	    			  a[i]=a[j];
+	    			  a[j]=t;
+	    			  
+	    		  }
+	    	  }
+	      }
+	      
+	      for(i=0;i<=k-1;i++)
+	    	  System.out.println(a[i]);
+	      
+		}
+
+	}
+
