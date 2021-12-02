@@ -1,6 +1,6 @@
 //matristeki elemanları tek boyutlu diziye aktarıp 50 ve daha küçük olan eleamanları 
 //sıralayıp yazdıran
-public class dersSinav {
+public class dizi {
 
 	public static void main(String[] args) {
 		int i,j,t;
